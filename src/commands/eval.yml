@@ -30,3 +30,5 @@ steps:
         EVAL_PLATFORM: << parameters.eval_platform >>
       command: |
         cci-<< parameters.eval_platform >>-eval << parameters.cmd >>
+  - store_artifacts:
+      path: << parameters.evals_result_location >>

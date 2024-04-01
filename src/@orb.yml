@@ -1,0 +1,9 @@
+version: 2.1
+
+description: >
+  Orb for running AI evals and analysing results with artifacts.
+  (OPEN PREVIEW - send feedback at ai-evals-feedback@circleci.com)
+
+display:
+  home_url: "https://github.com/CircleCI-Public/ai-evals-orb/wiki"
+  source_url: "https://github.com/CircleCI-Public/ai-evals-orb"

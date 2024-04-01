@@ -1,0 +1,15 @@
+description: >
+  This command downloads the specified type of eval binary.
+parameters:
+  eval_platform:
+    description: evaluation platform
+    type: string
+    default: braintrust
+    enum:
+      - braintrust
+steps:
+  - run:
+      name: Download eval binary
+      environment:
+        EVAL_PLATFORM: << parameters.eval_platform >>
+      command: <<include(scripts/main.sh)>>

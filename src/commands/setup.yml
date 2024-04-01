@@ -1,6 +1,0 @@
-description: >
-  This command downloads the specified type of eval binary.
-steps:
-  - run:
-      name: Download eval binary
-      command: <<include(scripts/main.sh)>>

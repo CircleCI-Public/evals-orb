@@ -22,6 +22,11 @@ parameters:
       - braintrust
 steps:
   - run:
+      name: Download << parameters.eval_platform >> eval binary
+      environment:
+        EVAL_PLATFORM: << parameters.eval_platform >>
+      command: <<include(scripts/main.sh)>>
+  - run:
       name: Run evaluation
       environment:
         CIRCLE_PIPELINE_ID: << parameters.circle_pipeline_id >>

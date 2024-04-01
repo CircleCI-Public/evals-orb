@@ -15,14 +15,14 @@ usage:
       steps:
         - checkout
         - run:
-          name: install python and depedencies
-          command: |
-            sudo apt-get update
-            sudo apt-get install python3.6
-            python3 --version
-            sudo apt install python3-pip
-            pip install braintrust
-            pip install -r ./experiments/ai-braintrust/requirements.txt
+            name: install python and depedencies
+            command: |
+              sudo apt-get update
+              sudo apt-get install python3.6
+              python3 --version
+              sudo apt install python3-pip
+              pip install braintrust
+              pip install -r ./experiments/ai-braintrust/requirements.txt
         - ai-evals/eval:
             eval_platform: braintrust
             circle_pipeline_id: << pipeline.id >>

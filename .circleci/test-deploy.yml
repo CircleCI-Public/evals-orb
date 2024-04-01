@@ -18,7 +18,11 @@ jobs:
     docker:
       - image: cimg/base:current-22.04
     steps:
-      - ai-evals/setup
+      - run:
+          name: Download braintrust eval binary
+          environment:
+            EVAL_PLATFORM: braintrust
+          command: <<include(scripts/main.sh)>>
       - run:
           name: Verify ai-evals/setup
           command: which cci-braintrust-eval

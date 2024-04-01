@@ -1,0 +1,32 @@
+description: This command runs an evaluation for the specified platform and saves results to specified location.
+parameters:
+  cmd:
+    description: command to execute
+    type: string
+  circle_pipeline_id:
+    description: CircleCI Pipeline ID
+    type: string
+  braintrust_experiment_name:
+    description: Braintrust experiment name
+    type: string
+    default: ""
+  evals_result_location:
+    description: evaluation result location
+    type: string
+    default: "./results"
+  eval_platform:
+    description: evaluation platform
+    type: string
+    default: braintrust
+    enum:
+      - braintrust
+steps:
+  - run:
+      name: Run evaluation
+      environment:
+        CIRCLE_PIPELINE_ID: << parameters.circle_pipeline_id >>
+        BRAINTRUST_EXPERIMENT_NAME: << parameters.braintrust_experiment_name >>
+        EVALS_RESULT_LOCATION: << parameters.evals_result_location >>
+        EVAL_PLATFORM: << parameters.eval_platform >>
+      command: |
+        cci-<< parameters.eval_platform >>-eval << parameters.cmd >>

@@ -1,0 +1,36 @@
+description: >
+  Run LLM evaluations with braintrust
+usage:
+  version: 2.1
+  orbs:
+    ai-evals: circleci/ai-evals@0.0
+  executors:
+    go:
+      working_directory: ~/project
+      docker:
+        - image: cimg/go:1.20.6
+  jobs:
+    aibraintrust-eval:
+      executor: go
+      steps:
+        - checkout
+        - run:
+          name: install python and depedencies
+          command: |
+            sudo apt-get update
+            sudo apt-get install python3.6
+            python3 --version
+            sudo apt install python3-pip
+            pip install braintrust
+            pip install -r ./experiments/ai-braintrust/requirements.txt
+        - ai-evals/eval:
+            eval_platform: braintrust
+            circle_pipeline_id: << pipeline.id >>
+            cmd: braintrust eval experiments/ai-braintrust/eval_tutorial.py
+  workflows:
+    ai-evals-workflow:
+      jobs:
+        - aibraintrust-eval:
+            context:
+              - context_name_where_eval_platform_specific_secrets_are_stored
+              - context_name_where_github_token_secret_is_stored

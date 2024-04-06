@@ -14,7 +14,7 @@ usage:
       executor: python
       steps:
         - checkout
-        - run:
+        - run:g
             name: install depedencies
             command: |
               pip install braintrust

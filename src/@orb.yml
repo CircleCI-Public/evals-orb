@@ -2,7 +2,7 @@ version: 2.1
 
 description: >
   Orb for running AI LLM app evals.
-  Send any feedback at ai@circleci.com
+  Send any feedback at ai-feedback@circleci.com
 
 display:
   home_url: "https://github.com/CircleCI-Public/ai-evals-orb/wiki"

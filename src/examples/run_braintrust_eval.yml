@@ -6,7 +6,6 @@ usage:
     ai-evals: circleci/ai-evals@0.0
   executors:
     python:
-      working_directory: ~/project
       docker:
         - image: cimg/python:3.10
   jobs:

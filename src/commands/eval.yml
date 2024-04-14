@@ -10,6 +10,14 @@ parameters:
     description: Braintrust experiment name
     type: string
     default: ""
+  langsmith_experiment_name:
+    description: Langsmith experiment name
+    type: string
+    default: ""
+  langsmith_endpoint:
+    description: Langsmith endpoint
+    type: string
+    default: ""
   evals_result_location:
     description: evaluation result location
     type: string
@@ -20,6 +28,7 @@ parameters:
     default: braintrust
     enum:
       - braintrust
+      - langsmith
 steps:
   - run:
       name: Download << parameters.eval_platform >> eval binary
@@ -30,9 +39,11 @@ steps:
       name: Run evaluation
       environment:
         CIRCLE_PIPELINE_ID: << parameters.circle_pipeline_id >>
-        BRAINTRUST_EXPERIMENT_NAME: << parameters.braintrust_experiment_name >>
         EVALS_RESULT_LOCATION: << parameters.evals_result_location >>
         EVAL_PLATFORM: << parameters.eval_platform >>
+        BRAINTRUST_EXPERIMENT_NAME: << parameters.braintrust_experiment_name >>
+        CCI_LANGCHAIN_EXPERIMENT_NAME: << parameters.langsmith_experiment_name >>
+        LANGCHAIN_ENDPOINT: << parameters.langsmith_endpoint >>
       command: |
         cci-<< parameters.eval_platform >>-eval << parameters.cmd >>
   - store_artifacts:

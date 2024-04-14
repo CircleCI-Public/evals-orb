@@ -1,5 +1,5 @@
 description: >
-  Run LLM evaluations with braintrust using the ai-evals orb
+  Run LLM evaluations with langsmith using the ai-evals orb
 usage:
   version: 2.1
   orbs:
@@ -9,23 +9,22 @@ usage:
       docker:
         - image: cimg/python:3.10
   jobs:
-    aibraintrust-eval:
+    ailangsmith-eval:
       executor: python
       steps:
         - checkout
         - run:
             name: install depedencies
             command: |
-              pip install braintrust
-              pip install -r ./experiments/ai-braintrust/requirements.txt
+              pip install -r ./experiments/ai-langsmith/requirements.txt
         - ai-evals/eval:
-            eval_platform: braintrust
+            eval_platform: langsmith
             circle_pipeline_id: << pipeline.id >>
-            cmd: braintrust eval experiments/ai-braintrust/eval_tutorial.py
+            cmd: python experiments/ai-langsmith/run_eval.py
   workflows:
     ai-evals-workflow:
       jobs:
-        - aibraintrust-eval:
+        - ailangsmith-eval:
             context:
               - context_name_where_eval_platform_specific_secrets_are_stored
               - context_name_where_github_token_secret_is_stored

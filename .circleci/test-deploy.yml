@@ -17,15 +17,30 @@ jobs:
   testing-setup-command:
     docker:
       - image: cimg/base:current-22.04
+    parameters:
+      eval_platform:
+        type: string
+        description: eval platform name
+        default: braintrust
+        enum:
+          - braintrust
+          - langsmith
     steps:
-      - ai-evals/setup
+      - ai-evals/setup:
+          eval_platform: << parameters.eval_platform >>
       - run:
-          name: Verify ai-evals/setup
-          command: which cci-braintrust-eval
+          name: Verify ai-evals/setup braintrust
+          command: which cci-<< parameters.eval_platform >>-eval
+
 workflows:
   test-deploy:
     jobs:
       - testing-setup-command:
+          eval_platform: braintrust
+          filters: *filters
+      - testing-setup-command:
+          name: Test Setup Command langsmith
+          eval_platform: langsmith
           filters: *filters
       - orb-tools/pack:
           filters: *release-filters

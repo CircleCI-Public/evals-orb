@@ -116,7 +116,7 @@ repo_name="cci-$EVAL_PLATFORM-eval"
 # Don't forget the v!
 case $EVAL_PLATFORM in
     "braintrust")
-    binary_version="v0.0.2"
+    binary_version="v0.0.3"
     ;;
     "langsmith")
     binary_version="v0.0.1"

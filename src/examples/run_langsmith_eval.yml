@@ -4,13 +4,10 @@ usage:
   version: 2.1
   orbs:
     ai-evals: circleci/ai-evals@0.0
-  executors:
-    python:
-      docker:
-        - image: cimg/python:3.10
   jobs:
     ailangsmith-eval:
-      executor: python
+      docker:
+        - image: cimg/python:3.10
       steps:
         - checkout
         - run:

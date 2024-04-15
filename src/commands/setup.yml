@@ -7,6 +7,7 @@ parameters:
     default: braintrust
     enum:
       - braintrust
+      - langsmith
 steps:
   - run:
       name: Download eval binary

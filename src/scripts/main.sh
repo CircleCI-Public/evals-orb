@@ -114,7 +114,18 @@ repo_name="cci-$EVAL_PLATFORM-eval"
 # binary="${orb_bin_dir}/${repo_name}"
 # TODO: Make the version configurable via parameter
 # Don't forget the v!
-binary_version="v0.0.2"
+case $EVAL_PLATFORM in
+    "braintrust")
+    binary_version="v0.0.3"
+    ;;
+    "langsmith")
+    binary_version="v0.0.2"
+    ;;
+    *)
+    echo "Unknown platform: $EVAL_PLATFORM" >&2
+    exit 1
+    ;;
+esac
 basic_name="cci-$EVAL_PLATFORM-eval"
 binary_name="${basic_name}-${binary_version}-${PLATFORM}-${ARCH}"
 binary_zip="${orb_bin_dir}/${binary_name}.zip"

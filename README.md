@@ -7,7 +7,8 @@ This repository has the code for the the CircleCI [Evals Orb](https://github.com
 
 ### Setup
 
-In order to use the Evals Orb on CircleCI checkout [llm-eval-examples](https://github.com/CircleCI-Public/llm-eval-examples) for usage examples. Email ai-feedback@circleci.com for feedback.
+In order to post PRs to GitHub, you will need to set the `GITHUB_TOKEN` environment variable with an access token that has repo scope access.
+For using the Evals Orb on CircleCI checkout [llm-eval-examples](https://github.com/CircleCI-Public/llm-eval-examples) for usage examples. Email ai-feedback@circleci.com for feedback.
 
 ### Use In Config
 

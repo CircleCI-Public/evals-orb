@@ -88,7 +88,7 @@ print_error() {
 }
 
 print_warn "This is an experimental version of the AI Evals orb."
-print_warn "Thank you for trying it out and please provide feedback to us at https://github.com/CircleCI-Public/ai-evals-orb/issues"
+print_warn "Thank you for trying it out and please provide feedback to us at https://github.com/CircleCI-Public/evals-orb/issues"
 
 if ! detect_os; then
     print_error "Unsupported operating system: $(uname -s)."

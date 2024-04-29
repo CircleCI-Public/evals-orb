@@ -1,9 +1,9 @@
 description: >
-  Run LLM evaluations with langsmith using the ai-evals orb
+  Run LLM evaluations with langsmith using the evals orb
 usage:
   version: 2.1
   orbs:
-    ai-evals: circleci/ai-evals@0.0
+    evals: circleci/evals@0.0
   jobs:
     ailangsmith-eval:
       docker:
@@ -14,12 +14,12 @@ usage:
             name: install depedencies
             command: |
               pip install -r ./experiments/ai-langsmith/requirements.txt
-        - ai-evals/eval:
+        - evals/eval:
             eval_platform: langsmith
             circle_pipeline_id: << pipeline.id >>
             cmd: python experiments/ai-langsmith/run_eval.py
   workflows:
-    ai-evals-workflow:
+    evals-workflow:
       jobs:
         - ailangsmith-eval:
             context:

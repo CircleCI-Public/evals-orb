@@ -1,9 +1,9 @@
 description: >
-  Run LLM evaluations with braintrust using the ai-evals orb
+  Run LLM evaluations with braintrust using the evals orb
 usage:
   version: 2.1
   orbs:
-    ai-evals: circleci/ai-evals@0.0
+    evals: circleci/evals@0.0
   jobs:
     aibraintrust-eval:
       docker:
@@ -15,12 +15,12 @@ usage:
             command: |
               pip install braintrust
               pip install -r ./experiments/ai-braintrust/requirements.txt
-        - ai-evals/eval:
+        - evals/eval:
             eval_platform: braintrust
             circle_pipeline_id: << pipeline.id >>
             cmd: braintrust eval experiments/ai-braintrust/eval_tutorial.py
   workflows:
-    ai-evals-workflow:
+    evals-workflow:
       jobs:
         - aibraintrust-eval:
             context:

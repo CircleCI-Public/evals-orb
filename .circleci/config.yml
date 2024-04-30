@@ -23,7 +23,7 @@ workflows:
       - shellcheck/check:
           filters: *filters
       - orb-tools/continue:
-          orb_name: ai-evals
+          orb_name: evals
           pipeline_number: << pipeline.number >>
           vcs_type: << pipeline.project.type >>
           requires:

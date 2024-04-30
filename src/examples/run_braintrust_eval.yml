@@ -1,5 +1,5 @@
 description: >
-  Run LLM evaluations with braintrust using the evals orb
+  Run LLM evaluations with Braintrust using the evals orb
 usage:
   version: 2.1
   orbs:

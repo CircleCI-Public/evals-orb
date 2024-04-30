@@ -1,5 +1,5 @@
 description: >
-  Run LLM evaluations with langsmith using the evals orb
+  Run LLM evaluations with LangSmith using the evals orb
 usage:
   version: 2.1
   orbs:

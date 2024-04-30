@@ -12,7 +12,7 @@ In order to post comments to PRs on GitHub, you will need to set the `GITHUB_TOK
 
 #### Orb Parameters
 
-The [ai-evals orb](https://github.com/circleci-public/ai-evals-orb) accepts the following parameters:
+The [evals orb](https://github.com/circleci-public/evals-orb) accepts the following parameters:
 
 _Some of the parameters are optional based on the eval platform being used._
 

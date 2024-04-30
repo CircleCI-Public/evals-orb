@@ -26,15 +26,15 @@ _Some of the parameters are optional based on the eval platform being used._
 
 - `evals_result_location` - Location to save evaluation results (default: `./results`)
 
-##### Braintrust specific parameters
+##### Braintrust-specific parameters
 
 - `braintrust_experiment_name` (optional) - Braintrust experiment name. We will generate a unique name based on an md5 of "`<CIRCLE_PIPELINE_ID>_<CIRCLE_WORKFLOW_ID>`" if no `braintrust_experiment_name` is provided.
 
-##### LangSmith specific parameters
+##### LangSmith-specific parameters
 
 - `langsmith_endpoint` - (optional) LangSmith API endpoint (default: `https://api.smith.langchain.com`)
 
-- `langsmith_experiment_name` (optional) - LangSmith experiment name. We will generate a unique name based on an MD5 of "`<CIRCLE_PIPELINE_ID>_<CIRCLE_WORKFLOW_ID>`" if no `langsmith_experiment_name` is provided. 
+- `langsmith_experiment_name` (optional) - LangSmith experiment name. We will generate a unique name based on an MD5 of "`<CIRCLE_PIPELINE_ID>_<CIRCLE_WORKFLOW_ID>`" if no `langsmith_experiment_name` is provided.
 
 ### Use In Config
 

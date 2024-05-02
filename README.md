@@ -30,13 +30,15 @@ _Some of the parameters are optional based on the eval platform being used._
 
 #### Braintrust-specific parameters
 
-- `braintrust_experiment_name` (optional) - Braintrust experiment name. If no value is provided, an experiment name will be auto-generated based on an MD5 hash of `"<CIRCLE_PIPELINE_ID>_<CIRCLE_WORKFLOW_ID>"`.
+- `braintrust_experiment_name` (optional) - Braintrust experiment name.
+  - If no value is provided, an experiment name will be auto-generated based on an MD5 hash of `"<CIRCLE_PIPELINE_ID>_<CIRCLE_WORKFLOW_ID>"`.
 
 #### LangSmith-specific parameters
 
 - `langsmith_endpoint` - (optional) LangSmith API endpoint (default: `https://api.smith.langchain.com`)
 
-- `langsmith_experiment_name` (optional) - LangSmith experiment name. If no value is provided, an experiment name will be auto-generated based on an MD5 hash of `"<CIRCLE_PIPELINE_ID>_<CIRCLE_WORKFLOW_ID>"`.
+- `langsmith_experiment_name` (optional) - LangSmith experiment name.
+  - If no value is provided, an experiment name will be auto-generated based on an MD5 hash of `"<CIRCLE_PIPELINE_ID>_<CIRCLE_WORKFLOW_ID>"`.
 
 ### Use In Config
 

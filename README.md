@@ -20,24 +20,24 @@ _Some of the parameters are optional based on the eval platform being used._
 
 #### Common parameters
 
-- `circle_pipeline_id` - CircleCI Pipeline ID
+- **`circle_pipeline_id`** - CircleCI Pipeline ID
 
-- `cmd` - Command to run the evaluation
+- **`cmd`** - Command to run the evaluation
 
-- `eval_platform` - Evaluation platform (e.g. `braintrust`, `langsmith` etc. - default: `braintrust`)
+- **`eval_platform`** - Evaluation platform (e.g. `braintrust`, `langsmith` etc. - default: `braintrust`)
 
-- `evals_result_location` - Location to save evaluation results (default: `./results`)
+- **`evals_result_location`** - Location to save evaluation results (default: `./results`)
 
 #### Braintrust-specific parameters
 
-- `braintrust_experiment_name` (optional) - Braintrust experiment name.
+- **`braintrust_experiment_name`** (optional) - Braintrust experiment name.
   - If no value is provided, an experiment name will be auto-generated based on an MD5 hash of `<CIRCLE_PIPELINE_ID>_<CIRCLE_WORKFLOW_ID>`.
 
 #### LangSmith-specific parameters
 
-- `langsmith_endpoint` - (optional) LangSmith API endpoint (default: `https://api.smith.langchain.com`)
+- **`langsmith_endpoint`** - (optional) LangSmith API endpoint (default: `https://api.smith.langchain.com`)
 
-- `langsmith_experiment_name` (optional) - LangSmith experiment name.
+- **`langsmith_experiment_name`** (optional) - LangSmith experiment name.
   - If no value is provided, an experiment name will be auto-generated based on an MD5 hash of `<CIRCLE_PIPELINE_ID>_<CIRCLE_WORKFLOW_ID>`.
 
 ### Use In Config

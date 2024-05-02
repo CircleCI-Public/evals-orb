@@ -10,13 +10,13 @@ This repository has the code for the CircleCI [Evals Orb](https://github.com/Cir
 
 In order to post comments to PRs on GitHub, you will need to set the `GITHUB_TOKEN` environment variable with an access token that has repo scope access.
 
-#### Orb Parameters
+### Orb Parameters
 
 The [evals orb](https://github.com/circleci-public/evals-orb) accepts the following parameters:
 
 _Some of the parameters are optional based on the eval platform being used._
 
-##### Common parameters
+#### Common parameters
 
 - `circle_pipeline_id` - CircleCI Pipeline ID
 
@@ -26,11 +26,11 @@ _Some of the parameters are optional based on the eval platform being used._
 
 - `evals_result_location` - Location to save evaluation results (default: `./results`)
 
-##### Braintrust-specific parameters
+#### Braintrust-specific parameters
 
 - `braintrust_experiment_name` (optional) - Braintrust experiment name. We will generate a unique name based on an MD5 hash of "`<CIRCLE_PIPELINE_ID>_<CIRCLE_WORKFLOW_ID>`" if no `braintrust_experiment_name` is provided.
 
-##### LangSmith-specific parameters
+#### LangSmith-specific parameters
 
 - `langsmith_endpoint` - (optional) LangSmith API endpoint (default: `https://api.smith.langchain.com`)
 

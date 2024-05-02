@@ -6,6 +6,8 @@ This repository has the code for the CircleCI [Evals Orb](https://github.com/Cir
 
 ## Usage
 
+:bulb: For [evals orb](https://github.com/CircleCI-Public/evals-orb) usage examples, check out the [llm-eval-examples](https://github.com/CircleCI-Public/llm-eval-examples) repo.
+
 ### Setup
 
 In order to post comments to GitHub pull requests, you will need to set a [`GITHUB_TOKEN`](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) environment variable with a [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) that has repo scope access.

@@ -4,9 +4,9 @@
 
 This repository has the code for the CircleCI [Evals Orb](https://github.com/CircleCI-Public/evals-orb).
 
-## Usage
+For [evals orb](https://github.com/CircleCI-Public/evals-orb) usage examples, check out the [llm-eval-examples](https://github.com/CircleCI-Public/llm-eval-examples) repo.
 
-:bulb: For [evals orb](https://github.com/CircleCI-Public/evals-orb) usage examples, check out the [llm-eval-examples](https://github.com/CircleCI-Public/llm-eval-examples) repo.
+## Usage
 
 ### Setup
 

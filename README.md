@@ -42,7 +42,7 @@ _Some of the parameters are optional based on the eval platform being used._
 - **`langsmith_experiment_name`** _(optional)_: LangSmith experiment name
   - If no value is provided, an experiment name will be auto-generated based on an MD5 hash of `<CIRCLE_PIPELINE_ID>_<CIRCLE_WORKFLOW_ID>`.
 
-### Use In Config
+### Use in Config
 
 For full usage guidelines, see the [Orb Registry listing](http://circleci.com/orbs/registry/orb/circleci/evals).
 

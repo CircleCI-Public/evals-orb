@@ -44,7 +44,7 @@ _Some of the parameters are optional based on the eval platform being used._
 
 ### Use in Config
 
-For full usage guidelines, see the [Orb Registry listing](http://circleci.com/orbs/registry/orb/circleci/evals).
+For full config usage guidelines, see the [evals orb](http://circleci.com/orbs/registry/orb/circleci/evals) documentation.
 
 ## Usage Examples
 

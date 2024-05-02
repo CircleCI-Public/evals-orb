@@ -8,7 +8,9 @@ This repository has the code for the CircleCI [Evals Orb](https://github.com/Cir
 
 ### Setup
 
-In order to post comments to PRs on GitHub, you will need to set the `GITHUB_TOKEN` environment variable with an access token that has repo scope access.
+In order to post comments to GitHub pull requests, you will need to set a [`GITHUB_TOKEN`](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) environment variable with a [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) that has repo scope access.
+
+You can add this [`GITHUB_TOKEN`](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) environment variable in CircleCI project settings. Alternatively, you could include this secret in the context you created as part of an LLMOps integration, if applicable.
 
 ### Orb Parameters
 

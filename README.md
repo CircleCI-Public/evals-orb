@@ -40,7 +40,9 @@ _Some of the parameters are optional based on the eval platform being used._
 
 For full usage guidelines, see the [Orb Registry listing](http://circleci.com/orbs/registry/orb/circleci/evals).
 
----
+## Usage Examples
+
+For [Evals Orb](https://github.com/CircleCI-Public/evals-orb) usage examples, check out the [llm-eval-examples](https://github.com/CircleCI-Public/llm-eval-examples) repo.
 
 ## FAQ
 

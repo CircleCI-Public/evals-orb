@@ -2,45 +2,53 @@
 
 [![CircleCI Build Status](https://circleci.com/gh/CircleCI-Public/evals-orb.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/CircleCI-Public/evals-orb) [![CircleCI Orb Version](https://badges.circleci.com/orbs/circleci/evals.svg)](https://circleci.com/orbs/registry/orb/circleci/evals) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/circleci-public/evals-orb/main/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
 
-This repository has the code for the the CircleCI [Evals Orb](https://github.com/CircleCI-Public/evals-orb).
+This repository has the code for the [CircleCI Evals Orb](https://circleci.com/developer/orbs/orb/circleci/evals).
+
+For [evals orb](https://circleci.com/developer/orbs/orb/circleci/evals) usage examples, check out the [llm-eval-examples](https://github.com/CircleCI-Public/llm-eval-examples) repo.
 
 ## Usage
 
 ### Setup
 
-In order to post comments to PRs on GitHub, you will need to set the `GITHUB_TOKEN` environment variable with an access token that has repo scope access.
+In order to post comments to GitHub pull requests, you will need to set a [`GITHUB_TOKEN`](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) environment variable with a [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) that has repo scope access.
 
-#### Orb Parameters
+You can add this [`GITHUB_TOKEN`](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) environment variable in CircleCI project settings. Alternatively, you could include this secret in the context you created as part of an LLMOps integration, if applicable.
+
+### Orb Parameters
 
 The [evals orb](https://github.com/circleci-public/evals-orb) accepts the following parameters:
 
 _Some of the parameters are optional based on the eval platform being used._
 
-##### Common parameters
+#### Common parameters
 
-- `circle_pipeline_id` - CircleCI Pipeline ID
+- **`circle_pipeline_id`**: CircleCI Pipeline ID
 
-- `cmd` - Command to run the evaluation
+- **`cmd`**: Command to run the evaluation
 
-- `eval_platform` - Evaluation platform (e.g. `braintrust`, `langsmith` etc. - default: `braintrust`)
+- **`eval_platform`**: Evaluation platform (e.g. `braintrust`, `langsmith` etc.; default: `braintrust`)
 
-- `evals_result_location` - Location to save evaluation results (default: `./results`)
+- **`evals_result_location`**: Location to save evaluation results (default: `./results`)
 
-##### Braintrust-specific parameters
+#### Braintrust-specific parameters
 
-- `braintrust_experiment_name` (optional) - Braintrust experiment name. We will generate a unique name based on an MD5 hash of "`<CIRCLE_PIPELINE_ID>_<CIRCLE_WORKFLOW_ID>`" if no `braintrust_experiment_name` is provided.
+- **`braintrust_experiment_name`** _(optional)_: Braintrust experiment name
+  - If no value is provided, an experiment name will be auto-generated based on an MD5 hash of `<CIRCLE_PIPELINE_ID>_<CIRCLE_WORKFLOW_ID>`.
 
-##### LangSmith-specific parameters
+#### LangSmith-specific parameters
 
-- `langsmith_endpoint` - (optional) LangSmith API endpoint (default: `https://api.smith.langchain.com`)
+- **`langsmith_endpoint`** _(optional)_: LangSmith API endpoint (default: `https://api.smith.langchain.com`)
 
-- `langsmith_experiment_name` (optional) - LangSmith experiment name. We will generate a unique name based on an MD5 hash of "`<CIRCLE_PIPELINE_ID>_<CIRCLE_WORKFLOW_ID>`" if no `langsmith_experiment_name` is provided.
+- **`langsmith_experiment_name`** _(optional)_: LangSmith experiment name
+  - If no value is provided, an experiment name will be auto-generated based on an MD5 hash of `<CIRCLE_PIPELINE_ID>_<CIRCLE_WORKFLOW_ID>`.
 
-### Use In Config
+### Use in Config
 
-For full usage guidelines, see the [Orb Registry listing](http://circleci.com/orbs/registry/orb/circleci/evals).
+For full config usage guidelines, see the [evals orb](http://circleci.com/orbs/registry/orb/circleci/evals) documentation.
 
----
+## Usage Examples
+
+For [evals orb](https://circleci.com/developer/orbs/orb/circleci/evals) usage examples, check out the [llm-eval-examples](https://github.com/CircleCI-Public/llm-eval-examples) repo.
 
 ## FAQ
 

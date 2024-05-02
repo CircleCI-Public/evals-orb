@@ -42,7 +42,7 @@ For full usage guidelines, see the [Orb Registry listing](http://circleci.com/or
 
 ## Usage Examples
 
-For [Evals Orb](https://github.com/CircleCI-Public/evals-orb) usage examples, check out the [llm-eval-examples](https://github.com/CircleCI-Public/llm-eval-examples) repo.
+For [evals orb](https://github.com/CircleCI-Public/evals-orb) usage examples, check out the [llm-eval-examples](https://github.com/CircleCI-Public/llm-eval-examples) repo.
 
 ## FAQ
 

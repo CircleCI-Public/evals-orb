@@ -2,7 +2,7 @@ version: 2.1
 
 description: >
   Orb for running LLM evaluations.
-  Check out [llm-eval-examples](https://github.com/CircleCI-Public/llm-eval-examples) for usage examples.
+  Check out https://github.com/CircleCI-Public/llm-eval-examples for usage examples.
   Email ai-feedback@circleci.com for feedback.
 
 display:

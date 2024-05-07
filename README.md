@@ -10,9 +10,11 @@ For [evals orb](https://circleci.com/developer/orbs/orb/circleci/evals) usage ex
 
 ### Setup
 
-In order to post comments to GitHub pull requests, you will need to set a [`GITHUB_TOKEN`](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) environment variable with a [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) that has repo scope access.
+In order to post comments to GitHub pull requests, you will need to create an environment variable named `GITHUB_TOKEN` with a [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) that has repo scope access.
+You have two options to do this:
 
-You can add this [`GITHUB_TOKEN`](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) environment variable in CircleCI project settings. Alternatively, you could include this secret in the context you created as part of an LLMOps integration, if applicable.
+- Add it to Project Settings > Environment Variables
+- [recommended] Add it as a context environment variable, either through Oganization Settings > Contexts, or through CircleCI Project Settings > LLMOps. You will then need to ensure [you add the context key to the job that requires access to it](https://circleci.com/docs/contexts/#create-and-use-a-context). 
 
 ### Orb Parameters
 

@@ -33,7 +33,7 @@ This will create a context with environment variables for the credentials you've
 
 ![LLMOps Integration Context](images/LLMOps-Integration-Context.png)
 
-:bulb: _You can also optionally [store a `GITHUB_TOKEN`](#to-enable-the-evals-orb-to-post-eval-job-summaries-on-github-pull-requests) as an environment variable on this context, if you'd like your pipelines to post summarized eval job results as comments on GitHub pull requests._
+:bulb: _You can also optionally [store a `GITHUB_TOKEN`](#set-up-the-orb-to-post-eval-job-summaries-as-comments-on-github-pull-requests) as an environment variable on this context, if you'd like your pipelines to post summarized eval job results as comments on GitHub pull requests._
 
 #### Set up the orb to post eval job summaries as comments on GitHub pull requests
 

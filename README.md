@@ -4,7 +4,17 @@
 
 This repository has the code for the [CircleCI Evals Orb](https://circleci.com/developer/orbs/orb/circleci/evals).
 
-For [evals orb](https://circleci.com/developer/orbs/orb/circleci/evals) usage examples, check out the [llm-eval-examples](https://github.com/CircleCI-Public/llm-eval-examples) repo.
+The Evals orb simplifies the definition and execution of evaluation jobs using popular third-party tools, and generates reports of evaluation results.
+
+Given the volatile nature of evaluations, evaluations orchestrated through this orb do not halt the pipeline if an evaluation fails. This approach ensures that the inherent flakiness of evaluations does not disrupt the development cycle.
+Instead, a summary of the evaluation results is created and presented:
+
+- As an artifact within the CircleCI User Interface:
+<img style="text-align:center" width="370" alt="Screenshot 2024-04-30 at 10 19 53" src="https://circleci.com/docs/assets/img/docs/llmops/artifact.png">
+
+- As a comment on the corresponding GitHub pull request **(only available for GitHub projects integrated through OAuth)**:
+<img style="text-align:center" width="550" alt="Screenshot 2024-04-30 at 10 21 48" src="https://circleci.com/docs/assets/img/docs/llmops/github-pr-comment.png">
+
 
 ## Usage
 

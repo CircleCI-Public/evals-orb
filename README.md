@@ -10,9 +10,11 @@ Given the volatile nature of evaluations, evaluations orchestrated through this 
 Instead, a summary of the evaluation results is created and presented:
 
 - As an artifact within the CircleCI User Interface:
+
   <img style="text-align:center" width="370" alt="Screenshot 2024-04-30 at 10 19 53" src="https://circleci.com/docs/assets/img/docs/llmops/artifact.png">
 
 - As a comment on the corresponding GitHub pull request **(only available for GitHub projects integrated through OAuth)**:
+
   <img style="text-align:center" width="550" alt="Screenshot 2024-04-30 at 10 21 48" src="https://circleci.com/docs/assets/img/docs/llmops/github-pr-comment.png">
 
 ## Usage

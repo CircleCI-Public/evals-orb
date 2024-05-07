@@ -23,8 +23,6 @@ Instead, a summary of the evaluation results is created and presented:
 
 #### Enter your OpenAI, LangSmith, and/or BrainTrust credentials into CircleCI
 
-Entering your OpenAI, Braintrust, and LangSmith credentials into CircleCI is easy.
-
 Just navigate to `Project Settings` > `LLMOps` and fill out the form by Clicking `Set up Integration`.
 
 ![Create Context](images/create-context.png)

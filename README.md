@@ -44,9 +44,9 @@ This will create a context with environment variables for the credentials you've
 
 In order to post comments to GitHub pull requests, you will need to create an environment variable named `GITHUB_TOKEN` with a [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) that has repo scope access.
 
-Once created, add `GITHUB_TOKEN` as a context environment variable on the same context you created as part of LLMOps Integration.
+Once created, add `GITHUB_TOKEN` as a context environment variable on the same context you created as part of LLMOps Integration via `Project Settings` > `LLMOps`.
 
-You can access this context via `Organization Settings` > `Contexts` or via `Project Settings` > `LLMOps`.
+You can also access this context via `Organization Settings` > `Contexts`.
 
 You will then need to ensure [you add the context key to the job that requires access to it](https://circleci.com/docs/contexts/#create-and-use-a-context), as follows...
 

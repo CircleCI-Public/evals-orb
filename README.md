@@ -21,7 +21,7 @@ Instead, a summary of the evaluation results is created and presented:
 
 ### Getting Started
 
-#### Enter your LangSmith and/or BrainTrust credentials into CircleCI
+#### Enter your OpenAI, LangSmith, and/or BrainTrust credentials into CircleCI
 
 Entering your OpenAI, Braintrust, and LangSmith credentials into CircleCI is easy.
 

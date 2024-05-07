@@ -31,7 +31,7 @@ Just navigate to `Project Settings` > `LLMOps` and fill out the form by Clicking
 
 This will create a context with environment variables for the credentials you've set up above.
 
-:warning: _Please take note of the generated context name. This will be used to update `context` value in the CircleCI configuration file._
+:warning: _Please take note of the generated context name (e.g. `ai-llm-eval-examples`). This will be used to update `context` value in the CircleCI configuration file._
 
 ![LLMOps Integration Context](images/LLMOps-Integration-Context.png)
 
@@ -58,13 +58,13 @@ workflows:
     jobs:
       - run-braintrust-evals:
           context:
-            - ai-your-context # Replace this with your context name
+            - ai-llm-eval-examples # Replace this with your context name
   langsmith-evals:
     when: << pipeline.parameters.run-langsmith-evals >>
     jobs:
       - run-langsmith-evals:
           context:
-            - ai-your-context # Replace this with your context name
+            - ai-llm-eval-examples # Replace this with your context name
 ```
 
 ### Orb Parameters

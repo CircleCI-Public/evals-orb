@@ -10,6 +10,15 @@ For [evals orb](https://circleci.com/developer/orbs/orb/circleci/evals) usage ex
 
 ### Setup
 
+#### Setting up your LangSmith or BrainTrust integrations
+
+.... 
+
+#### Setting up the orb to post a Pull Request comment on evaluation completion
+
+[!WARNING]
+Currently, this feature is available only to GitHub projects integrated throug OAuth. To find out which GitHub account type you have, refer to the [GitHub OAuth integration](https://circleci.com/docs/github-integration/) page of our Docs.
+
 In order to post comments to GitHub pull requests, you will need to create an environment variable named `GITHUB_TOKEN` with a [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) that has repo scope access.
 You have two options to do this:
 

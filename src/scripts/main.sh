@@ -121,7 +121,7 @@ case $EVAL_PLATFORM in
     "langsmith")
     binary_version="v0.0.3"
     ;;
-    "none")
+    "")
     binary_version="v0.0.1"
     ;;
     *)
@@ -130,7 +130,7 @@ case $EVAL_PLATFORM in
     ;;
 esac
 basic_name="cci-$EVAL_PLATFORM-eval"
-if [ "$EVAL_PLATFORM" = "none" ]; then
+if [ "$EVAL_PLATFORM" = "" ]; then
     basic_name="cci-eval"
 fi
 

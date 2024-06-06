@@ -24,7 +24,7 @@ jobs:
         enum:
           - braintrust
           - langsmith
-          - none
+          - ""
     steps:
       - evals/setup:
           eval_platform: << parameters.eval_platform >>

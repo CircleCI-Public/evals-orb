@@ -1,0 +1,22 @@
+description: >
+  Run LLM evaluations with your in repo setup(like pytest) using evals orb
+usage:
+  version: 2.1
+  orbs:
+    evals: circleci/evals@0.0
+  jobs:
+    aibraintrust-eval:
+      docker:
+        - image: cimg/python:3.10
+      steps:
+        - checkout
+        - evals/eval:
+            circle_pipeline_id: << pipeline.id >>
+            cmd: command_to_run_your_eval
+  workflows:
+    evals-workflow:
+      jobs:
+        - aibraintrust-eval:
+            context:
+              - context_name_where_eval_platform_specific_secrets_are_stored
+              - context_name_where_github_token_secret_is_stored

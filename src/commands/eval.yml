@@ -25,11 +25,11 @@ parameters:
   eval_platform:
     description: evaluation platform
     type: string
-    default: ""
+    default: "default"
     enum:
       - braintrust
       - langsmith
-      - ""
+      - default
 steps:
   - run:
       name: Download << parameters.eval_platform >> eval binary
@@ -46,6 +46,10 @@ steps:
         CCI_LANGCHAIN_EXPERIMENT_NAME: << parameters.langsmith_experiment_name >>
         LANGCHAIN_ENDPOINT: << parameters.langsmith_endpoint >>
       command: |
-        cci-<< parameters.eval_platform >>-eval << parameters.cmd >>
+        if [ "$EVAL_PLATFORM" == "default" ]; then
+          cci-eval << parameters.cmd >>
+        else
+          cci-<< parameters.eval_platform >>-eval << parameters.cmd >>
+        fi
   - store_artifacts:
       path: << parameters.evals_result_location >>

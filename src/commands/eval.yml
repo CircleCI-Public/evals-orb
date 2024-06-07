@@ -25,11 +25,11 @@ parameters:
   eval_platform:
     description: evaluation platform
     type: string
-    default: "default"
+    default: "custom"
     enum:
       - braintrust
       - langsmith
-      - default
+      - custom
 steps:
   - run:
       name: Download << parameters.eval_platform >> eval binary

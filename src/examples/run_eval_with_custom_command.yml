@@ -12,7 +12,7 @@ usage:
         - checkout
         - evals/eval:
             circle_pipeline_id: << pipeline.id >>
-            cmd: command_to_run_your_eval
+            cmd: run_a_custom_command
   workflows:
     evals-workflow:
       jobs:

@@ -130,7 +130,7 @@ case $EVAL_PLATFORM in
     ;;
 esac
 basic_name="cci-$EVAL_PLATFORM-eval"
-if [ "$EVAL_PLATFORM" = "default" ]; then
+if [ "$EVAL_PLATFORM" = "custom" ]; then
     basic_name="cci-eval"
 fi
 

@@ -47,7 +47,7 @@ steps:
         LANGCHAIN_ENDPOINT: << parameters.langsmith_endpoint >>
       command: |
         if [ "$EVAL_PLATFORM" == "custom" ]; then
-          cci-eval << parameters.cmd >>
+          cci-eval custom << parameters.cmd >>
         else
           cci-<< parameters.eval_platform >>-eval << parameters.cmd >>
         fi

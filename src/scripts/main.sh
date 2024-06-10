@@ -111,6 +111,9 @@ base_dir="$(printf "%s" "$CIRCLE_WORKING_DIRECTORY" | sed "s|~|$HOME|")"
 orb_bin_dir="${base_dir}/.circleci/orbs/circleci/ai-evals/${PLATFORM}/${ARCH}"
 org="circleci"
 repo_name="cci-$EVAL_PLATFORM-eval"
+if [ "$EVAL_PLATFORM" = "custom" ]; then
+    repo_name="cci-eval"
+fi
 # binary="${orb_bin_dir}/${repo_name}"
 # TODO: Make the version configurable via parameter
 # Don't forget the v!

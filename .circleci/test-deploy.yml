@@ -21,10 +21,10 @@ jobs:
       eval_platform:
         type: string
         description: eval platform name
-        default: braintrust
         enum:
           - braintrust
           - langsmith
+          - ""
     steps:
       - evals/setup:
           eval_platform: << parameters.eval_platform >>

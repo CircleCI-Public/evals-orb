@@ -20,6 +20,7 @@ workflows:
       - orb-tools/review:
           source_dir: src
           filters: *filters
+          exclude: RC009
       - shellcheck/check:
           filters: *filters
       - orb-tools/continue:

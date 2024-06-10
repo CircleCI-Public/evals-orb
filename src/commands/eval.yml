@@ -46,7 +46,7 @@ steps:
         CCI_LANGCHAIN_EXPERIMENT_NAME: << parameters.langsmith_experiment_name >>
         LANGCHAIN_ENDPOINT: << parameters.langsmith_endpoint >>
       command: |
-        if [ "$EVAL_PLATFORM" == "default" ]; then
+        if [ "$EVAL_PLATFORM" == "custom" ]; then
           cci-eval << parameters.cmd >>
         else
           cci-<< parameters.eval_platform >>-eval << parameters.cmd >>

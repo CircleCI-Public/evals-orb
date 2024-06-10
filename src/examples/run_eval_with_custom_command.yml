@@ -1,5 +1,5 @@
 description: >
-  Run LLM evaluations with your in repo setup(like pytest) using evals orb
+  Run LLM evaluations with your in-repo setup (like pytest) using evals orb
 usage:
   version: 2.1
   orbs:

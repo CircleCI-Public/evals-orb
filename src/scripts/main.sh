@@ -121,7 +121,7 @@ case $EVAL_PLATFORM in
     "langsmith")
     binary_version="v0.0.3"
     ;;
-    "")
+    "custom")
     binary_version="v0.0.1"
     ;;
     *)

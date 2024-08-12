@@ -77,9 +77,11 @@ _Some of the parameters are optional based on the eval platform being used._
 
 - **`cmd`**: Command to run the evaluation
 
-- **`eval_platform`**: Evaluation platform (e.g. `braintrust`, `langsmith` etc.; default: `braintrust`)
+- **`eval_platform`**: Evaluation platform (e.g. `braintrust`, `langsmith` or `custom`; default: `custom`)
 
 - **`evals_result_location`**: Location to save evaluation results (default: `./results`)
+
+- **`shell`**: Shell to use (default: `/bin/bash`). This param only applies when `eval_platform` is not provided or is set to `custom`.
 
 #### Braintrust-specific parameters
 

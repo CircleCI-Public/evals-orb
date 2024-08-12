@@ -3,7 +3,7 @@ description: >
 usage:
   version: 2.1
   orbs:
-    evals: circleci/evals@0.0
+    evals: circleci/evals@1.0
   jobs:
     aibraintrust-eval:
       docker:
@@ -13,6 +13,7 @@ usage:
         - evals/eval:
             circle_pipeline_id: << pipeline.id >>
             cmd: run_a_custom_command
+            shell: /bin/bash
   workflows:
     evals-workflow:
       jobs:

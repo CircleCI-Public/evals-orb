@@ -30,6 +30,10 @@ parameters:
       - braintrust
       - langsmith
       - custom
+  shell:
+    description: shell to use
+    type: string
+    default: /bin/bash
 steps:
   - run:
       name: Download << parameters.eval_platform >> eval binary
@@ -45,6 +49,7 @@ steps:
         BRAINTRUST_EXPERIMENT_NAME: << parameters.braintrust_experiment_name >>
         CCI_LANGCHAIN_EXPERIMENT_NAME: << parameters.langsmith_experiment_name >>
         LANGCHAIN_ENDPOINT: << parameters.langsmith_endpoint >>
+        SHELL: << parameters.shell >>
       command: |
         if [ "$EVAL_PLATFORM" == "custom" ]; then
           cci-eval custom << parameters.cmd >>

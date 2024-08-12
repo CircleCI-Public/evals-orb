@@ -125,7 +125,7 @@ case $EVAL_PLATFORM in
     binary_version="v0.0.3"
     ;;
     "custom")
-    binary_version="v0.0.1"
+    binary_version="v0.0.2"
     ;;
     *)
     echo "Unknown platform: $EVAL_PLATFORM" >&2

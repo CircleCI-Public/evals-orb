@@ -49,7 +49,7 @@ steps:
         BRAINTRUST_EXPERIMENT_NAME: << parameters.braintrust_experiment_name >>
         CCI_LANGCHAIN_EXPERIMENT_NAME: << parameters.langsmith_experiment_name >>
         LANGCHAIN_ENDPOINT: << parameters.langsmith_endpoint >>
-        SHELL: << parameters.shell >>
+        EVALS_SHELL: << parameters.shell >>
       command: |
         if [ "$EVAL_PLATFORM" == "custom" ]; then
           cci-eval custom << parameters.cmd >>

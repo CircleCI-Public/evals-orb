@@ -101,7 +101,7 @@ For full config usage guidelines, see the [evals orb](http://circleci.com/orbs/r
 
 ## Usage Examples
 
-For [CircleCI Evals Orb 1.x.x](https://circleci.com/developer/orbs/orb/circleci/evals?version=1.0.8) usage examples, check out the [llm-eval-examples](https://github.com/CircleCI-Public/llm-eval-examples) repo. Usage examples are only aplicable to CircleCI Evals Orb 1.x.x.
+For [CircleCI Evals Orb 1.x.x](https://circleci.com/developer/orbs/orb/circleci/evals?version=1.0.8) usage examples, check out the [llm-eval-examples](https://github.com/CircleCI-Public/llm-eval-examples) repo. Usage examples are only applicable to CircleCI Evals Orb 1.x.x.
 
 ## FAQ
 

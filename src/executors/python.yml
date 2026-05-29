@@ -1,10 +1,13 @@
 description: >
-  Sample python exector for docs
-docker:
-  - image: 'cimg/python:3.10'
+  The docker container to use when running this orb's jobs
+
 parameters:
   tag:
+    type: string
+    default: "3.13"
     description: >
       Pick a specific cimg/python image variant:
       https://hub.docker.com/r/cimg/python/tags
-    type: string
+
+docker:
+  - image: cimg/python:<<parameters.tag>>
